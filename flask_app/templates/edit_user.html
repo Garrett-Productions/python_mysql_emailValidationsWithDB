@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CRUD</title>
+</head>
+<body>
+    <h1>Edit User {{ one_user.id }}</h1><br></br>
+    <form action="/make_changes/{{ one_user.id }}" method="POST">
+            <label for="fname">First Name:</label>
+            <input type="text" name="f_name" value="{{ one_user.first_name }}">
+            <label for="lname">Last Name:</label>
+            <input type="text" name="l_name" value="{{ one_user.last_name }}">
+            <label for="email" >Email:</label>
+            <input type="text" name="email" value="{{ one_user.email }}">
+            <input type="submit" value="Update">
+        </form><br></br>
+    <a href="/read_one/{{ one_user.id }}"> Show User </a> <br></br>
+    <a href="/read_all"> Home </a>
+</body>
+</html>
